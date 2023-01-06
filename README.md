@@ -3,6 +3,8 @@
 1. Create the login landing page
 2. Set up the upload image page.
 
+   - Make icons background stay on when theyre active for bottom menu
+
    - Image upload/storing website
    - Dating images
    - Adding Weight in current image

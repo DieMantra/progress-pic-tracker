@@ -3,9 +3,6 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import TopNav from "../components/layouts/TopNav";
-
-import { api } from "../utils/api";
 
 const Home: NextPage = () => {
   const session = useSession();
@@ -17,7 +14,6 @@ const Home: NextPage = () => {
           name="description"
           content="Exercise progress tracker, image generator"
         />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Image
         src="/beach-cartwheel.jpg"
@@ -25,11 +21,12 @@ const Home: NextPage = () => {
         className="fixed top-0 z-[-10] h-full w-full object-cover"
         width={1920}
         height={1080}
+        draggable={false}
       />
       <div className="fixed top-0 z-[-10] h-full w-full bg-gradient-to-b from-white via-white to-purple-100 opacity-90"></div>
-      <div className="container z-20 h-[100vh] pt-16">
+      <div className="container z-10 mx-auto  h-[100vh] pt-16 md:pt-32 ">
         <header className="px-3 pt-4 text-center">
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-3xl font-bold text-gray-900 md:text-5xl">
             Welcome to Weight Loss Journey!
           </h1>
           <div className="pt-5">
@@ -57,7 +54,7 @@ const Home: NextPage = () => {
                   onClick={() => signOut()}
                   className="text-sm font-light text-violet-800 hover:text-violet-300"
                 >
-                  Logout of current account
+                  Logout
                 </button>
               </div>
             ) : (

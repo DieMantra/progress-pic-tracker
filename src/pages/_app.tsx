@@ -4,7 +4,6 @@ import { type AppType } from "next/app";
 
 import { api } from "../utils/api";
 
-import BottomNav from "../components/layouts/BottomNav";
 import TopNav from "../components/layouts/TopNav";
 import "../styles/globals.css";
 
@@ -14,10 +13,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <TopNav session={session} />
+      <TopNav />
 
       <Component {...pageProps} />
-      {/* <BottomNav /> */}
     </SessionProvider>
   );
 };

@@ -7,3 +7,7 @@
     @apply h-10 w-40 rounded-full border bg-white font-bold hover:bg-gray-50;
   }
 }
+
+body {
+  overflow-x: hidden;
+}
